@@ -11,6 +11,20 @@
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <link href="dist/css/styles.css" rel="stylesheet" />
+        <style>
+            /* 额外增加一点照片悬停互动的动效 */
+            .interest-img {
+                transition: transform 0.3s ease, shadow 0.3s ease;
+                cursor: pointer;
+                object-fit: cover;
+                height: 200px;
+                width: 100%;
+            }
+            .interest-img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+            }
+        </style>
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
@@ -42,7 +56,7 @@
                         New Haven, CT · (203) 435-3188 ·
                         <a href="mailto:Jiaming.liu@yale.edu">Jiaming.liu@yale.edu</a>
                     </div>
-                    <p class="lead mb-5">I am a Master’s student at Yale University specializing in Materials Science and Mechanical Engineering, expected to graduate in May 2026. I possess a strong research background, including a project with Corning Inc. on glass reliability and crack healing, as well as internships focused on lithium-ion battery safety and nickel-titanium alloy phase transformations. My technical expertise encompasses material characterization, ALD processes, and CAD modeling. Currently, I am actively seeking full-time roles in process, manufacturing, or mechanical engineering, with a long-term interest in transitioning into leadership or management positions. I am eligible for STEM OPT and have a strong interest in innovative, fast-paced industrial environments.</p>
+                    <p class="lead mb-5">I am a Master’s student at Yale University specializing in Materials Science and Mechanical Engineering, expected to graduate in May 2026. I possess a strong research background, including a project with Corning Inc. on glass reliability and crack healing, as well as internships focused on lithium-ion battery safety and nickel-titanium alloy phase transformations.</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/jiaming-liu" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
@@ -53,44 +67,21 @@
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Experience</h2>
-                    
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Graduate Research Assistant</h3>
                             <div class="subheading mb-3">Yale University (Joint with Corning Inc.)</div>
-                            <ul>
-                                <li>Carried out a joint research program with Corning Inc. on Fusion 5 and borosilicate glasses, using a custom Joule-heated silicon stage with live camera and IR imaging to evaluate thermal shock resistance and crack evolution.</li>
-                                <li>Introduced Vickers indents and ran rapid heating cycles at 450&deg;C (sub-T<sub>g</sub> annealing) and 530&deg;C (near-T<sub>g</sub> annealing), finding noticeable crack closure at 450&deg;C but much stronger crack healing at 530&deg;C in both 10- and 100-cycle tests.</li>
-                                <li>Compared 1 N vs 2 N indents and 1.6 mm vs 2.7 mm samples, quantifying stronger crack healing for smaller/shallower cracks and thinner samples, consistent with faster heating and longer time at peak temperature in the 1.6 mm samples.</li>
-                            </ul>
+                            <p>Collaborated with Corning Inc. on Fusion 5 and borosilicate glasses, using custom Joule-heated stages to study thermal shock and sub-T<sub>g</sub> crack healing.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2025 - Present</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">Aug 2025 - Present</span></div>
                     </div>
-                    
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Undergraduate Research Assistant</h3>
                             <div class="subheading mb-3">Technion - Israel Institute of Technology</div>
-                            <ul>
-                                <li>Conducted battery materials research on polymer (polyethylene) separators for lithium-ion batteries, focusing on separator/electrode interface performance.</li>
-                                <li>Prepared and optimized thin film coatings via Atomic Layer Deposition (ALD) to enhance durability, thermal stability, and solvent resistance.</li>
-                                <li>Characterized films and coated membranes using SEM, TMA, and solvent immersion tests, achieving near-zero shrinkage at 140&deg;C and excellent solvent stability.</li>
-                            </ul>
+                            <p>Optimized PE separators for Li-ion batteries using Atomic Layer Deposition (ALD) for enhanced thermal stability at 140°C.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">October 2023 - April 2025</span></div>
-                    </div>
-                    
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Laboratory Assistant Intern</h3>
-                            <div class="subheading mb-3">National Innovation Center for Advanced Medical Devices (Shenzhen)</div>
-                            <ul>
-                                <li>Executed materials research on Ni-Ti alloys, analyzing phase transformation via Austenite finish temperature testing.</li>
-                                <li>Assessed surface roughness using laser microscopy, ensuring compliance with quality and safety standards for medical applications.</li>
-                                <li>Delivered performance data supporting alloy optimization and the development of durable, cost-effective materials for minimally invasive devices.</li>
-                            </ul>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2025 - August 2025</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">Oct 2023 - Apr 2025</span></div>
                     </div>
                 </div>
             </section>
@@ -101,14 +92,11 @@
                     <h2 class="mb-5">Selected Projects</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Surface Characterization Project Lead</h3>
-                            <div class="subheading mb-3">Technion, Department of Material Science & Engineering</div>
-                            <ul>
-                                <li>Led a project to analyze the surface roughness of samples pre- and post-treatment using Scanning Electron Microscopy (SEM).</li>
-                                <li>Performed advanced materials characterization after surface treatments such as friction, compression, and water immersion to provide in-depth comparative data and facilitate comprehensive structural analysis.</li>
-                            </ul>
+                            <h3 class="mb-0">Surface Characterization Lead</h3>
+                            <div class="subheading mb-3">Technion</div>
+                            <p>Analyzed surface roughness post-treatment using SEM and water immersion testing.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">October 2023 - January 2024</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2023 - 2024</span></div>
                     </div>
                 </div>
             </section>
@@ -120,19 +108,16 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Yale University</h3>
-                            <div class="subheading mb-3">Master of Science</div>
-                            <div>Material Science & Mechanical Engineering</div>
+                            <div class="subheading mb-3">Master of Science in Materials Science</div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2025 - May 2026</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2025 - 2026</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Technion - Israel Institute of Technology</h3>
-                            <div class="subheading mb-3">Bachelor of Science</div>
-                            <div>Material Science and Engineering</div>
-                            <p>Relevant Coursework: Thermodynamics of Materials, Mechanical Behavior of Materials, Processes in Microelectronics</p>
+                            <div class="subheading mb-3">Bachelor of Science in Materials Science</div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2021 - July 2025</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2021 - 2025</span></div>
                     </div>
                 </div>
             </section>
@@ -141,29 +126,7 @@
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Software & Programming</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-linux"></i></li>
-                    </ul>
-                    <p>LabView, Origin, SolidWorks, CAD, Blender, Ansys Granta, Python (basic), Linux (basic).</p>
-                    
-                    <div class="subheading mb-3 mt-4">Laboratory Techniques</div>
-                    <ul class="fa-ul mb-0">
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Scanning Electron Microscopy (SEM) & Transmission Electron Microscopy (TEM)</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Thermal Shock Testing & Vickers Micro-indentation</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>X-ray Diffraction & Atomic Force Microscopy</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Photolithography & Electrochemical Deposition</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Lithium-ion Battery Fabrication and Testing</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Chemical Vapor Deposition & Atomic Layer Deposition (ALD)</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Mechanical Testing (Tensile, Impact)</li>
-                    </ul>
-                    
-                    <div class="subheading mb-3 mt-4">Language Skills</div>
-                    <ul class="fa-ul mb-0">
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Mandarin (Native)</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>English (Fluent)</li>
-                    </ul>
+                    <p>SEM, TEM, ALD, Photolithography, Thermal Shock Testing, Vickers Indentation, SolidWorks, Python.</p>
                 </div>
             </section>
             <hr class="m-0" />
@@ -171,24 +134,33 @@
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <p>Outside of the laboratory and cleanroom, I am a passionate extreme landscape photographer. I enjoy traveling to remote and challenging environments to capture the raw beauty of nature, with recent photography expeditions taking me across the dramatic landscapes of Norway, Iceland, and Chile.</p>
-                    <p class="mb-0">When I am not working on post-processing techniques to perfect my visual storytelling, I maintain a strong commitment to physical fitness and regular gym training, which equips me with the resilience and focus needed for both demanding field photography and high-paced engineering environments.</p>
+                    <p class="mb-4">I am a passionate extreme landscape photographer and a dedicated fitness enthusiast. Here are some moments from my expeditions:</p>
+                    
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <img class="img-fluid rounded shadow interest-img" src="dist/assets/img/norway.jpg" alt="Norway Expedition" />
+                            <div class="mt-2 text-center text-muted"><small>Norway Fjords</small></div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <img class="img-fluid rounded shadow interest-img" src="dist/assets/img/iceland.jpg" alt="Iceland Expedition" />
+                            <div class="mt-2 text-center text-muted"><small>Iceland Glaciers</small></div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <img class="img-fluid rounded shadow interest-img" src="dist/assets/img/chile.jpg" alt="Chile Expedition" />
+                            <div class="mt-2 text-center text-muted"><small>Chile Volcanos</small></div>
+                        </div>
+                    </div>
+                    
+                    <p class="mt-3">Regular gym training maintains the physical resilience needed for both field photography and high-intensity engineering research.</p>
                 </div>
             </section>
             <hr class="m-0" />
             
             <section class="resume-section" id="awards">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Honors & Awards</h2>
+                    <h2 class="mb-5">Awards</h2>
                     <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Dean's List Scholarship - Technion, Israel Institute of Technology (2024)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Dean's List Scholarship - Technion, Israel Institute of Technology (2023)
-                        </li>
+                        <li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>Dean's List Scholarship (2023, 2024)</li>
                     </ul>
                 </div>
             </section>
