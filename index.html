@@ -11,6 +11,18 @@
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <link href="dist/css/styles.css" rel="stylesheet" />
+        <style>
+            .interest-img {
+                transition: transform 0.3s ease;
+                cursor: pointer;
+                object-fit: cover;
+                height: 200px;
+                width: 100%;
+            }
+            .interest-img:hover {
+                transform: scale(1.05);
+            }
+        </style>
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
@@ -53,7 +65,6 @@
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Experience</h2>
-                    
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Graduate Research Assistant</h3>
@@ -66,7 +77,6 @@
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">August 2025 - Present</span></div>
                     </div>
-                    
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Undergraduate Research Assistant</h3>
@@ -79,7 +89,6 @@
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">October 2023 - April 2025</span></div>
                     </div>
-                    
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Laboratory Assistant Intern</h3>
@@ -95,7 +104,6 @@
                 </div>
             </section>
             <hr class="m-0" />
-            
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Selected Projects</h2>
@@ -113,7 +121,6 @@
                 </div>
             </section>
             <hr class="m-0" />
-
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Education</h2>
@@ -137,7 +144,6 @@
                 </div>
             </section>
             <hr class="m-0" />
-            
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Skills</h2>
@@ -147,7 +153,6 @@
                         <li class="list-inline-item"><i class="fab fa-linux"></i></li>
                     </ul>
                     <p>LabView, Origin, SolidWorks, CAD, Blender, Ansys Granta, Python (basic), Linux (basic).</p>
-                    
                     <div class="subheading mb-3 mt-4">Laboratory Techniques</div>
                     <ul class="fa-ul mb-0">
                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Scanning Electron Microscopy (SEM) & Transmission Electron Microscopy (TEM)</li>
@@ -158,37 +163,37 @@
                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Chemical Vapor Deposition & Atomic Layer Deposition (ALD)</li>
                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Mechanical Testing (Tensile, Impact)</li>
                     </ul>
-                    
-                    <div class="subheading mb-3 mt-4">Language Skills</div>
-                    <ul class="fa-ul mb-0">
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Mandarin (Native)</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>English (Fluent)</li>
-                    </ul>
                 </div>
             </section>
             <hr class="m-0" />
-            
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <p>Outside of the laboratory and cleanroom, I am a passionate extreme landscape photographer. I enjoy traveling to remote and challenging environments to capture the raw beauty of nature, with recent photography expeditions taking me across the dramatic landscapes of Norway, Iceland, and Chile.</p>
-                    <p class="mb-0">When I am not working on post-processing techniques to perfect my visual storytelling, I maintain a strong commitment to physical fitness and regular gym training, which equips me with the resilience and focus needed for both demanding field photography and high-paced engineering environments.</p>
+                    <p class="mb-4">I am a passionate extreme landscape photographer and a dedicated fitness enthusiast. I enjoy traveling to remote environments like Norway, Iceland, and Chile to capture nature's raw beauty.</p>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <img class="img-fluid rounded shadow interest-img" src="dist/assets/img/norway.jpg" alt="Norway" />
+                            <div class="mt-2 text-center text-muted"><small>Norway Expedition</small></div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <img class="img-fluid rounded shadow interest-img" src="dist/assets/img/iceland.jpg" alt="Iceland" />
+                            <div class="mt-2 text-center text-muted"><small>Iceland Expedition</small></div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <img class="img-fluid rounded shadow interest-img" src="dist/assets/img/chile.jpg" alt="Chile" />
+                            <div class="mt-2 text-center text-muted"><small>Chile Expedition</small></div>
+                        </div>
+                    </div>
+                    <p class="mt-3">Regular gym training maintains the physical resilience needed for both field photography and high-intensity engineering research.</p>
                 </div>
             </section>
             <hr class="m-0" />
-            
             <section class="resume-section" id="awards">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Honors & Awards</h2>
                     <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Dean's List Scholarship - Technion, Israel Institute of Technology (2024)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Dean's List Scholarship - Technion, Israel Institute of Technology (2023)
-                        </li>
+                        <li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>Dean's List Scholarship - Technion, Israel Institute of Technology (2024)</li>
+                        <li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>Dean's List Scholarship - Technion, Israel Institute of Technology (2023)</li>
                     </ul>
                 </div>
             </section>
