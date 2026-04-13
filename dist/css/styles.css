@@ -10984,3 +10984,62 @@ section.resume-section .resume-section-content {
     height: 200px;
     object-fit: cover;
 }
+/* 1. 舞台：固定宽度和高度，不给抖动留空间 */
+.exp-gallery-stage {
+    height: 180px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* 2. 交互容器：初始宽度就给够，这样鼠标划入划出非常稳定 */
+.stacked-gallery {
+    position: relative;
+    width: 550px; 
+    height: 140px;
+    cursor: pointer;
+}
+
+/* 3. 图片基础样式 */
+.stacked-img {
+    position: absolute;
+    width: 270px;
+    height: 140px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    /* 重点：增加 transition 时间，让所有动作都有缓冲 */
+    transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.3s;
+}
+
+/* 4. 初始堆叠位置（不用 rotate，直接用位移更稳） */
+.img-1 { transform: translateX(0); z-index: 3; }
+.img-2 { transform: translateX(50px); z-index: 2; }
+.img-3 { transform: translateX(100px); z-index: 1; }
+
+/* 5. 展开逻辑：只在容器 hover 时改变位置，不改变缩放 */
+.stacked-gallery:hover .img-1 { transform: translateX(0); }
+.stacked-gallery:hover .img-2 { transform: translateX(180px); }
+.stacked-gallery:hover .img-3 { transform: translateX(360px); }
+
+/* 6. 单张放大逻辑：在【已展开】的基础上叠加放大，而不是回到原点 */
+/* 这里我们用 combined selector 来确保它是基于展开后的位置放大的 */
+.stacked-gallery:hover .img-1:hover { 
+    transform: translateX(0) scale(1.2); 
+    z-index: 10;
+}
+.stacked-gallery:hover .img-2:hover { 
+    transform: translateX(180px) scale(1.2); 
+    z-index: 10;
+}
+.stacked-gallery:hover .img-3:hover { 
+    transform: translateX(360px) scale(1.2); 
+    z-index: 10;
+}
+
+/* 额外：增加一个阴影增强，让放大的那张更有立体感 */
+.stacked-img:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
